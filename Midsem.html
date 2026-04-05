@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Kingsley Essel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* --- Global Styles --- */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: #f9f9f9;
+        scroll-behavior: smooth;
+    }
+    
+    .container {
+        width: 85%;
+        margin: auto;
+        overflow: hidden;
+    }
+    
+    /* --- Navigation --- */
+    .navbar {
+        background: #1a252f;
+        color: white;
+        padding: 1rem 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    .navbar ul {
+        display: flex;
+        list-style: none;
+    }
+    
+    .navbar ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 0 15px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    
+    .navbar ul li a:hover {
+        color: #3498db;
+    }
+    
+    /* --- Hero & Slider --- */
+    .hero {
+        background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('your-bg.jpg');
+        background-size: cover;
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+    }
+    
+    .slider-frame {
+        width: 250px;
+        height: 250px;
+        margin: 20px auto;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 8px solid #3498db;
+    }
+    
+    .slide-images {
+        display: flex;
+        width: 300%; /* 3 images = 300% */
+        animation: slideLoop 10s infinite;
+    }
+    
+    .slide-images img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+    
+    @keyframes slideLoop {
+        0% { transform: translateX(0); }
+        33% { transform: translateX(0); }
+        38% { transform: translateX(-250px); }
+        66% { transform: translateX(-250px); }
+        71% { transform: translateX(-500px); }
+        100% { transform: translateX(-500px); }
+    }
+    
+    .intro-card {
+        background: white;
+        color: #333;
+        padding: 30px;
+        border-radius: 10px;
+        margin-top: 30px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    
+    /* --- Layout Components --- */
+    .section-padding { padding: 80px 0; }
+    
+    .section-header {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2rem;
+        color: #2c3e50;
+    }
+    
+    .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+    
+    .card {
+        background: white;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        border-top: 5px solid #3498db;
+    }
+    
+    /* --- Table Styling --- */
+    .bg-dark { background: #2c3e50; }
+    .white-text { color: white; }
+    
+    .custom-table {
+        width: 100%;
+        background: white;
+        border-collapse: collapse;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .custom-table th, .custom-table td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .custom-table th {
+        background: #3498db;
+        color: white;
+    }
+    
+    /* --- Buttons & Links --- */
+    .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background: #e74c3c;
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        margin-top: 15px;
+    }
+    
+    footer {
+        padding: 40px 0;
+        background: #111;
+        color: #888;
+        text-align: center;
+    }
+    </style>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Welcome!!</div>
+        <nav>
+            <ul>
+                <!-- <li><a href="home">HOME</a></li> -->
+                <li><a href="About.html">ABOUT</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+        <!-- dropdown for the navbar -->
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="name-title">KINGSLEY ESSEL</h1>
+            <p class="student-id">ID: PD/ICT/24/099</p>
+            
+            <div class="slider-frame">
+                <div class="slide-images">
+                    <img src="20260206_111226.jpg" alt="Profile 1">
+                    <img src="20260206_111226.jpg" alt="Profile 2">
+                    <img src="20260206_111226.jpg" alt="Profile 3">
+                </div>
+            </div>
+
+            <div class="intro-card">
+                <h3>Career Objectives</h3>
+                <p>I am a highly dedicated Computer Science student at Takoradi Technical University, aiming to leverage my growing web development expertise at Google. I am passionate about utilizing technology to solve complex global problems, improving user accessibility, and contributing to innovative software solutions that impact lives worldwide.</p>
+                <a href="IBMDesign20260224-31-tyt6zp.pdf" class="btn">More...</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 class="section-header">About & Experience</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h4>Education</h4>
+                    <p><strong>Technical University:</strong> TTU (2026)</p>
+                    <p><strong>Major:</strong> Computer Science / ICT</p>
+                </div>
+                <div class="card">
+                    <h4>Experience</h4>
+                    <p>Intern at Birth And Death Registry_Liberation Road Takoradi  (2025). Managed web maintenance and UI responsiveness for client portals.</p>
+                </div>
+                <div class="card">
+                    <h4>Leadership</h4>
+                    <p>I.T officer in <u>Royal Trinity Temple</u> Takoradi Ghana 2025.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="activities" class="bg-dark section-padding">
+        <div class="container">
+            <h2 class="section-header white-text">Academic Calendar</h2>
+            <table class="custom-table">
+                <thead>
+                    <tr><th>Month</th><th>Planned Activity</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>April</td><td>Mid-Semester Exam Portfolio Submission</td></tr>
+                    <tr><td>June</td><td>Internship Attachment Placement</td></tr>
+                    <tr><td>August</td><td>Final Project Presentation</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h3>Contact & Connect</h3>
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/1AeSGJMN7D/">Facebook</a> [0277102249] 
+            </div>
+            <p>&copy; 2026 Kingsley Essel. Developed for SDC 414.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
